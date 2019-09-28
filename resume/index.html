@@ -4,33 +4,46 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
 
 
 <style>
+    body{
+        font-family: 'Montserrat', sans-serif;
+    }
 h1, h2{
     font-family: 'Montserrat', sans-serif;
+    color: #5036EF;
 }
 h1{
-    margin-top: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 65px;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 h2{
-    font-weight: lighter;
+    font-weight: bold;
     padding-bottom: 5px;
-    border-bottom: 2px solid black;
+    font-size: 30px;
+    /*border-bottom: 2px solid black;*/
 }
 h3, .date{
     padding: 0;
     margin: 0;
-    font-size: 1em;
+    font-size: 18px;
     line-height: 1.2em;
+    font-weight: 700;
 }
-
+hr{
+    margin: 1.5em 0;
+    border-bottom: 7px solid #5036EF;
+}
 .role{
     width: 100%;
     margin-bottom: 15px;
 }
 .company, .company-location{
+    font-weight: 600;
     font-size: 0.9em;
 }
 .company-location{
@@ -49,14 +62,29 @@ h3, .date{
 .links{
     width: 100%;
 }
+.links a {
+    color: black;
+}
 ul.links {
     margin: 0;
+    margin-top: 10px;
     padding: 0;
 }
 ul.links li
 {
-    display: inline-block;
+    display: block;
+    float: right;
 
+}
+.gpa{
+    font-weight: 600;
+    margin-top: 8px;
+    display:block;
+}
+.education-other{
+    margin-top: 5px;
+    margin-bottom: 0;
+    display:block;
 }
 .inline-list{
     display: inline-block;
@@ -67,8 +95,8 @@ ul.links li
     display: inline-block;
 }
 .inline-list.fancy li{
-    padding: 0px 8px;
-    background-color:lightskyblue;
+    padding: 0px 5px;
+    /*background-color:rgb(173, 162, 247);*/
     border-radius: 5px;
 
 }
@@ -76,26 +104,28 @@ ul.links li
 <div class="wrap">
 <div class="container">
 <div class="row">
-    <h1>Paul Li</h1>
-    <span class="role">Computer Science, Honours and Specialization</span>
-    <ul class="links">
-        <li>
-            <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:paul.j.li.97@gmail.com">paul.j.li.97@gmail.com</a>
-        </li>
-        <li>
-            <i class="fa fa-phone" aria-hidden="true"></i> 647-969-0232
-        </li>
-    </ul>
-    <ul class="links">
-        <li>
-            <i class="fa fa-github-alt" aria-hidden="true"></i> <a href="https://github.com/illuap">github.com/illuap</a>
-        </li>
-        <li>
-            <i class="fa fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/illuap/">linkedin.com/in/illuap</a>
-        </li>
-    </ul>
+    <div class="col-9">
+        <h1>Paul Li</h1>
+        <span class="role">Computer Science, Honours and Specialization</span>
+    </div>
+    <div class="col-3">
+        <ul class="links">
+            <li>
+                <a href="mailto:paul.j.li.97@gmail.com">paul.j.li.97@gmail.com </a><i class="fa fa-envelope" aria-hidden="true"></i>
+            </li>
+            <li>
+                <span> 647-969-0232 </span><i class="fa fa-phone" aria-hidden="true"></i>
+            </li>
+            <li>
+                <a href="https://github.com/illuap">github.com/illuap </a><i class="fa fa-github-alt" aria-hidden="true"></i>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/illuap/">linkedin.com/in/illuap </a><i class="fa fa-linkedin" aria-hidden="true"></i>
+            </li>
+        </ul>
+    </div>
 </div>
-<br/>
+<hr/>
 <div class="row">
     <div class="col-12">
         <div>
@@ -109,8 +139,8 @@ ul.links li
                 <span class="company-location">Toronto, ON</span>
                 <ul>
                     <li>4 month summer internship as a full stack developer using ASP.NET MVC Framework, SQL and Kendo UI </li>
-                    <li>Refactored the codebase for abstracting classes and making them dependency injectable</li>
-                    <li>Implement the use of mock data into unit tests using the Moq framework</li>
+                    <li>Refactored the codebase by abstracting classes and making them dependency injectable to improve pre-existing functional tests</li>
+                    <li>Implement the use of mock data into the automated unit tests using the Moq framework</li>
                 </ul>
             </div>
             <div class="work-item">
@@ -121,16 +151,16 @@ ul.links li
                 <span class="company">DAC Group, </span>
                 <span class="company-location">Toronto, ON</span>
                 <ul>
-                    <li>12 month internship as a full stack developer using ASP.NET Framework, SQL and MongoDB</li>
+                    <li>12 month internship as a full stack developer using ASP.NET Framework, SQL, MongoDB and Azure cloud computing technologies</li>
                     <li>Redesign an existing backend process for increased reliability and reducing the process from 3 hours down to 2 minutes using cloud-based technologies such as Azure functions and Azure Queues</li>
-                    <li>Intergrated new features using Facebook's Graph API and Google My Business API into our application</li>
+                    <li>Intergrated features using Facebook's Graph API and Google My Business API to respond to reviews in a centralized web app</li>
                     <li>Deployed and worked on critical products in agile enviornment following the Scum methodology</li>
                     <li>R&D using Redis for in-memory data storage to decrease API response times</li>
                 </ul>
             </div>
         </div>
         <div>
-            <h2>Projects</h2>
+            <h2>Projects</h2> 
             <div class="achivement">
                 <div class="d-flex justify-content-between">
                     <h3>Phillips Hue IoT Web App</h3>
@@ -139,7 +169,7 @@ ul.links li
                 <span class="company">CS3307 Object Oriented Design and Analysis</span>
                 <span class="company-location"></span>
                 <ul>
-                    <li>Backend development for a web app using Wt and MySQL</li>
+                    <li>Backend development using Wt, MySQL and the Phillip Hue API create a web app to control lights across multple bridges</li>
                     <li>Collaborative work using agile and tools such as Jira for our development process</li>
                 </ul>
             </div>
@@ -152,7 +182,7 @@ ul.links li
                 <span class="company-location"></span>
                 <ul>
                     <li>Frontend development for a web app using AngularJS, JQuery, HTML and CSS</li>
-                    <li>Implementation of RESTful API</li>
+                    <li>Implementation of RESTful API to create a centralized location for students to store class notes</li>
                 </ul>
             </div>
             <div class="achivement">
@@ -161,11 +191,10 @@ ul.links li
                     <span class="date">Sept 2017</span>
                 </div>
                 <span class="company"></span>
-                <span class="company-location">http://pandarestaurant.ca</span>
+                <span class="company-location">pandarestaurant.ca</span>
                 <ul>
                     <li>Website development using PHP, MySQL, HTML, CSS and JavaScript </li>
-                    <li>Redesign and implementation of a new look for my client’s website</li>
-                    <li>Working closely with the client to maintain and update their website</li>
+                    <li>Working closely with the client to redesign and implementation a new look and feel for their business website</li>
                 </ul>
             </div>
         </div>
@@ -193,25 +222,17 @@ ul.links li
             </div>
         </div>
         <div>
-            <div class="achivement">
+            <div class="    ">
                 <h2>Education</h2>
                 <div class="d-flex justify-content-between">
                         <h3>The University of Western Ontario</h3>
                         <span class="date">Sept 2015 - Apr 2020</span>
                     </div>
-                    <span class="company"></span>
-                    <span class="company">Honors Specialization in Computer Science with Minor in Software Engineering</span>
-                </div>
-                <span>GPA 3.7/4.0</span></br>
-                <span>Faculty of Western Science Dean’s Honor Roll</span></br>
-                <span style="display:inline-block">Current Courses: </span>
-                <ul class="inline-list">
-                    <li>Algorithms II, </li>
-                    <li>Distributed and Parallel Systems, </li>
-                    <li>Software Maintenance and Configuration, </li>
-                    <li>Specifications, Testing, and Quality Assurance, </li>
-                    <li>Foundations of Computer Science</li>
-                </ul>
+                    <span class="gpa">Honors Specialization in Computer Science with Minor in Software Engineering</span>
+                    <span class="gpa">GPA 3.7/4.0</span>
+                    <span class="education-other">Faculty of Western Science Dean’s Honor Roll</span>
+                    <p class="education-other">Current Courses: Algorithms II, Distributed and Parallel Systems, Software Maintenance and Configuration, Specifications, Testing and Quality Assurance, Foundations of Computer Science</p>
+            </div>
             </div>
         </div>
     </div>
